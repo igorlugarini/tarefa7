@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Jogo de Adivinhação</h1>
+      <p class="instructions">
+        Tente adivinhar o número secreto entre 1 e 100. Você tem 10 tentativas.
+      </p>
+
+      <label for="guessInput">Seu palpite:</label>
+      <div class="controls">
+        <input id="guessInput" type="number" min="1" max="100" placeholder="Digite um número" />
+        <button id="guessButton" type="button">Chutar</button>
+      </div>
+
+      <p id="message" aria-live="polite">Digite um número para começar.</p>
+      <p id="attempts">Tentativas restantes: 10</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

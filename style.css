@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  font-family: Arial, sans-serif;
+  color: #e2e8f0;
+}
+
+.container {
+  width: min(90vw, 480px);
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #f8fafc;
+}
+
+.instructions {
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.8rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  background: #22c55e;
+  color: #052e16;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#message {
+  margin-top: 1.5rem;
+  min-height: 48px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+#attempts {
+  margin-top: 0.75rem;
+  color: #bfdbfe;
+}
