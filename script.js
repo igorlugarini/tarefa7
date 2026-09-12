@@ -15,6 +15,8 @@ function startGame() {
   secretNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
   attemptsLeft = maxAttempts;
   gameOver = false;
+  globalThis.secretNumber = secretNumber;
+  globalThis.attemptsLeft = attemptsLeft;
   guessInput.value = '';
   updateAttempts();
   messageElement.textContent = 'Digite um número para começar.';
