@@ -36,5 +36,9 @@ if (!message.textContent.includes('Você acertou!')) {
   throw new Error('Acerto não foi reconhecido');
 }
 
+if (window.document.getElementById('attempts').textContent.trim() !== 'Tentativas restantes: 9') {
+  throw new Error('Contador de tentativas após vitória na primeira tentativa incorreto');
+}
+
 console.log('VERIFICACAO_OK');
 console.log(JSON.stringify({ secret, attempts: window.document.getElementById('attempts').textContent, message: message.textContent }));

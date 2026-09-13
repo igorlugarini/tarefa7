@@ -47,14 +47,14 @@ function handleGuess() {
     return;
   }
 
+  attemptsLeft -= 1;
+  updateAttempts();
+
   if (guess === secretNumber) {
     messageElement.textContent = 'Você acertou!';
     endGame();
     return;
   }
-
-  attemptsLeft -= 1;
-  updateAttempts();
 
   if (attemptsLeft === 0) {
     messageElement.textContent = `Você perdeu! O número secreto era ${secretNumber}.`;
